@@ -93,22 +93,20 @@ body {
 }
 
 .lampHead::after {
-  content: "";
-  position: absolute;
-  top: 100%; 
-  left: 50%;
-  transform: translateX(-50%);
-  width: 180px;  
-  height: 300px; 
-  background: radial-gradient(
-    ellipse at top,
-    rgba(255, 255, 180, 0.3),
-    rgba(255, 255, 180, 0) 80%
-  );
-  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-  filter: blur(5px);
-  z-index: -1;
-  pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 180px;
+    height: 300px;
+    background: radial-gradient(ellipse at top,
+            rgba(255, 255, 180, 0.3),
+            rgba(255, 255, 180, 0) 80%);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    filter: blur(5px);
+    z-index: -1;
+    pointer-events: none;
 }
 
 .windows {
@@ -332,4 +330,63 @@ body {
     width: 60px;
     height: 60px;
     background: #c7f7fd;
+}
+
+.chair {
+    position: absolute;
+    bottom: 180px;
+    right: 200px;
+    width: 130px;
+    height: 200px;
+    border-right: 30px solid #1C302F;
+    border-bottom: 30px solid #1C302F;
+    border-radius: 30px;
+}
+
+.chairStand {
+    display: block;
+    position: absolute;
+    width: 15px;
+    height: 90px;
+    background: #1C302F;
+    bottom: -131px;
+    left: 55px;
+}
+
+.standTConnector {
+    display: block;
+    position: absolute;
+    width: 50px;
+    height: 10px;
+    background: #1C302F;
+    border-radius: 20px;
+    top: -10px;
+    right: -20px;
+}
+
+.standBConnector {
+    display: block;
+    position: absolute;
+    width: 80px;
+    height: 10px;
+    background: #1C302F;
+    border-radius: 20px;
+    bottom: -9px;
+    right: -32px;
+    z-index: 10;
+}
+
+.wheels {
+    position: absolute;
+    top: 11px;
+    left: -2px;
+    display: flex;
+    gap: 20px;
+}
+
+.wheel {
+    width: 15px;
+    height: 15px;
+    background: #1C302F;
+    border-radius: 50%;
 }
