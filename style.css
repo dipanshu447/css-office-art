@@ -1,0 +1,122 @@
+:root {
+    --lamp-color: #7758ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #D9E1EE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.canvas {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.clock {
+    margin: 80px 50px;
+    transform: scale(0.8);
+    position: relative;
+    border: 4px solid #445765;
+}
+
+.hourHand {
+    position: absolute;
+    left: 50%;
+    top: 8%;
+    height: 2.5rem;
+}
+
+.minHand {
+    position: absolute;
+    top: 50%;
+    right: 12%;
+    width: 2.2rem;
+}
+
+.table {
+    z-index: 10;
+    bottom: 3em;
+    position: absolute;
+    justify-self: center;
+    width: 60%;
+    height: 16rem;
+    border: 20px solid #685A3E;
+    border-bottom: 0;
+}
+
+.floor {
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    background: #6340ffee;
+    width: 100%;
+    height: 5em;
+}
+
+.wallLamps {
+    z-index: 10;
+    position: absolute;
+    top: 0  ;
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    gap: 400px;   
+}
+
+.lamp {
+    width: 8px;
+    height: 80%; 
+    background: var(--lamp-color);
+    position: relative;
+}
+
+.lamptop {
+    position: absolute;
+    top: 90%;
+    left: -6px;
+    width: 20px;
+    height: 20px;
+    border-radius: 0 0 0 0px;
+    background: var(--lamp-color);
+}
+
+.lampHead {
+    display: block;
+    position: relative;
+    top: 90%;
+    left: -40px;
+    width: 100px;
+    height: 20px;
+    border-radius: 50% 50% 0 0;
+    background: var(--lamp-color);
+    box-shadow: inset 0 0 0 1000px rgba(166, 151, 233, 0.3);
+}
+
+.windows {
+    position: absolute;
+    top: 15%;
+    right: 30%;
+    height: 200px;
+    width: 35em;
+    border: 10px solid #A8B6C7;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    background: #cbe3fc;
+}
+
+.window {
+    width: 100%;
+    height: 100%;
+    color: #A8B6C7;
+}

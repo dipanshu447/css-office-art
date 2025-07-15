@@ -1,0 +1,14 @@
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.line {
+    border: 1px solid;
+}
+
+.br {
+    border-right: 10px solid;
+}
