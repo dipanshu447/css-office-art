@@ -43,16 +43,6 @@ body {
     width: 2.2rem;
 }
 
-.table {
-    z-index: 10;
-    bottom: 3em;
-    position: absolute;
-    justify-self: center;
-    width: 60%;
-    height: 16rem;
-    border: 20px solid #685A3E;
-    border-bottom: 0;
-}
 
 .floor {
     z-index: 1;
@@ -105,19 +95,16 @@ body {
 .lampHead::after {
   content: "";
   position: absolute;
-  top: 100%; /* position just below the lamp head */
+  top: 100%; 
   left: 50%;
   transform: translateX(-50%);
-  
-  width: 180px;  /* width of light cone */
-  height: 300px; /* how far the light reaches */
-
+  width: 180px;  
+  height: 300px; 
   background: radial-gradient(
     ellipse at top,
     rgba(255, 255, 180, 0.3),
     rgba(255, 255, 180, 0) 80%
   );
-
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   filter: blur(5px);
   z-index: -1;
@@ -200,4 +187,36 @@ body {
     border-radius: 50% 50% 50% 50%;
     transform: rotate(10deg);
     box-shadow: inset -5px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.table {
+    z-index: 10;
+    left: 200px;
+    bottom: 3em;
+    position: absolute;
+    justify-self: center;
+    width: 60%;
+    height: 16rem;
+    border: 20px solid #685A3E;
+    border-bottom: 0;
+    display: flex;
+    gap: 100px;
+}
+
+.computer {
+    position: relative;
+    top: -75%;
+    width: 200px;
+    height: 130px;
+    border: 10px solid #414141;
+    background: #93d2ff;
+}
+
+.stand {
+    position: absolute;
+    bottom: -40px;
+    left: 45%;
+    width: 10px;
+    height: 40px;
+    border: 10px solid #414141;
 }
