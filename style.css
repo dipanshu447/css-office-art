@@ -149,6 +149,7 @@ body {
     border-radius: 50% 50% 0 0;
     background: var(--lamp-color);
     box-shadow: inset 0 0 0 1000px rgba(166, 151, 233, 0.3);
+    cursor: pointer;
 }
 
 .lampHead::after {
@@ -166,6 +167,12 @@ body {
     filter: blur(5px);
     z-index: -1;
     pointer-events: none;
+}
+
+.lampHead:hover::after {
+  background: radial-gradient(ellipse at top,
+    rgba(255, 255, 200, 0.5),
+    rgba(255, 255, 200, 0) 80%);
 }
 
 .windows {
@@ -223,11 +230,35 @@ body {
     box-shadow: inset -5px 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.branch3 {
+    display: block;
+    position: absolute;
+    top: -170px;
+    left: 80%;
+    width: 3px;
+    height: 150px;
+    background: #09790f;
+    transform: skew(-10deg);
+}
+
+.leaf3 {
+    display: block;
+    position: absolute;
+    top: -80px;
+    left: -10px;
+    width: 50px;
+    height: 120px;
+    background: var(--leaf-color);
+    border-radius: 50% 50% 50% 50%;
+    transform: rotate(20deg);
+    box-shadow: inset -5px 0 10px rgba(0, 0, 0, 0.1);
+}
+
 .branch2 {
     display: block;
     position: absolute;
     top: -60px;
-    left: 60%;
+    left: 50%;
     width: 3px;
     height: 40px;
     background: #09790f;
@@ -520,6 +551,7 @@ body {
   border-radius: 5px;
   box-shadow: inset -2px -2px 5px rgba(0,0,0,0.2), 0 4px 6px rgba(0,0,0,0.2);
   overflow: visible;
+  cursor: pointer;
 }
 
 .cup::before,
