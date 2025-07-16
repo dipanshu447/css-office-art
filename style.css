@@ -38,13 +38,36 @@ body {
     left: 50%;
     top: 8%;
     height: 2.5rem;
+    transform-origin: bottom;
+    animation: ticking 43200s linear infinite;
 }
 
 .minHand {
     position: absolute;
     top: 50%;
-    right: 12%;
+    right: 11%;
     width: 2.2rem;
+    transform-origin: left;
+    animation: ticking 3600s linear infinite;
+}
+
+.secHand {
+    position: absolute;
+    bottom: 14%;
+    right: 48%;
+    height: 2rem;
+    color: rgb(51, 51, 51);
+    transform-origin: top;
+    animation: ticking 60s steps(60) infinite;
+}
+
+@keyframes ticking {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
 }
 
 
