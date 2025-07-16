@@ -249,7 +249,7 @@ body {
 .computer {
     display: inline-block;
     position: relative;
-    bottom: 85%;
+    bottom: 88%;
     width: 200px;
     height: 130px;
     border: 6px solid #414141;
@@ -264,15 +264,15 @@ body {
     left: 45%;
     width: 10px;
     height: 40px;
-    border: 10px solid #414141;
+    border: 6px solid #414141;
 }
 
 .holder {
     position: absolute;
     top: 28px;
-    width: 80px;
+    width: 60px;
     height: 20px;
-    right: -40px;
+    right: -30px;
     border-radius: 50%;
     background: #303030;
 }
@@ -284,36 +284,67 @@ body {
     right: 0;
     width: 250px;
     height: 180px;
-    border: 10px solid rgb(65, 65, 65);
+    border: 6px solid rgb(168, 168, 168);
     background: #fff;
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
+    padding: 25px 20px;
+    border-radius: 5px;
+}
+
+.whiteboardDepth {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 250px;
+    height: 180px;
+    border: 6px solid rgb(65, 65, 65);
+    border-radius: 5px;
 }
 
 .stickyNote {
-    display: block;
+    display: inline-block;
     position: relative;
-    width: 60px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     padding: 10px;
+    margin: 5px;
+    box-shadow: 5px 5px 0px rgb(236, 236, 236);
+}
+
+.bhead {
+    position: absolute;
+    top: 4%;
+    left: 34%;
+    font-size: 0.7rem;
+    font-family: 'Comic Sans MS', 'Segoe UI', cursive, sans-serif;
+}
+
+.stickyNote small {
+    font-family: 'Comic Sans MS', 'Segoe UI', cursive, sans-serif;
+    font-size: 0.55rem;
+    font-weight: 600;
+    color: #2c2c2c;
+    display: block;
+    line-height: 1.2;
+    text-align: center;
+    letter-spacing: 0.5px;
 }
 
 .fill {
     display: block;
     width: 30px;
     height: 5px;
-    background: #000;
+    background: #b9b9b9;
     margin: 2px 0;
+    border-radius: 20px;
 }
 
 .fill2 {
     display: block;
     width: 30px;
     height: 5px;
-    background: #000;
+    background: #dadada;
     margin: 2px 5px;
+    border-radius: 20px;
 }
 
 .app_window {
