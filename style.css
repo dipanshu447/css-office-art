@@ -29,28 +29,50 @@ body {
     height: 100%;
 }
 
-.heading{
+.heading {
     position: absolute;
-    top: 20px;
-    left: 40%;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
     font-family: "Bebas Neue", sans-serif;
-    letter-spacing: 10px;
-    font-weight: 600;
-    font-size: 30px;
-    color: #b3b3b3;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 8px;
+    color: #fff;
+    text-shadow:
+        0 0 5px rgba(255, 255, 255, 0.2),
+        0 0 10px rgba(255, 255, 255, 0.2),
+        0 0 20px rgba(255, 200, 255, 0.2);
+    animation: pulseGlow 4s ease-in-out infinite;
+    z-index: 50;
 }
 
-.heading::after{
+.heading::after {
     content: "Cozy Office Vibes";
     position: absolute;
+    top: 4px;
+    left: 4px;
+    color: #b3b3b3;
+    z-index: -1;
+    letter-spacing: 8px;
+    font-size: 40px;
+    opacity: 0.6;
     width: 400px;
-    top: 0px;
-    left: 1%;
-    font-family: "Bebas Neue", sans-serif;
-    letter-spacing: 10px;
-    font-weight: 600;
-    font-size: 30px;
-    color: #000000;
+}
+
+@keyframes pulseGlow {
+    0%, 100% {
+        text-shadow:
+            0 0 5px rgba(197, 152, 255, 0.1),
+            0 0 10px rgba(197, 152, 255, 0.2),
+            0 0 18px rgba(197, 152, 255, 0.3);
+    }
+    50% {
+        text-shadow:
+            0 0 8px rgba(134, 91, 255, 0.2),
+            0 0 16px rgba(197, 152, 255, 0.5),
+            0 0 28px rgba(197, 152, 255, 0.2);
+    }
 }
 
 .clock {
@@ -643,3 +665,11 @@ body {
     background: #DA6C2A;
     border-radius: 5px 0 0 5px;
 }
+
+/* .dustbin {
+    position: absolute;
+    left: 20px;
+    width: 100px;
+    height: 200px;
+    background: #000;
+} */
