@@ -4,6 +4,7 @@
     --window-color: #A8B6C7;
     --leaf-color: linear-gradient(to bottom right, #4CAF50, #2E7D32);
     --cup-color: #F78438;
+    --floor-color: #5c528bee;
 }
 
 * {
@@ -27,10 +28,16 @@ body {
 }
 
 .clock {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 255, 255);
     margin: 80px 50px;
     transform: scale(0.8);
     position: relative;
-    border: 4px solid #445765;
+    /* border: 6px solid #272627; */
+    border: 4px solid #cacaca;
+    /* outline: 6px solid #515051; */
+    outline: 6px solid #272627;
 }
 
 .hourHand {
@@ -56,16 +63,18 @@ body {
     bottom: 14%;
     right: 48%;
     height: 2rem;
-    color: rgb(51, 51, 51);
+    color: rgb(197, 40, 40);
+    /* color: rgb(51, 51, 51); */
     transform-origin: top;
     animation: ticking 60s steps(60) infinite;
 }
 
 @keyframes ticking {
-    from{
+    from {
         transform: rotate(0deg);
     }
-    to{
+
+    to {
         transform: rotate(360deg);
     }
 }
@@ -75,7 +84,7 @@ body {
     z-index: 1;
     position: absolute;
     bottom: 0;
-    background: #6340ffee;
+    background: var(--floor-color);
     width: 100%;
     height: 5em;
 }
@@ -243,9 +252,10 @@ body {
     bottom: 85%;
     width: 200px;
     height: 130px;
-    border: 10px solid #414141;
+    border: 6px solid #414141;
     background: #93d2ff;
     padding: 8px;
+    border-radius: 3px;
 }
 
 .stand {
@@ -262,7 +272,7 @@ body {
     top: 28px;
     width: 80px;
     height: 20px;
-    right:  -40px;
+    right: -40px;
     border-radius: 50%;
     background: #303030;
 }
@@ -382,7 +392,8 @@ body {
 .chair {
     position: absolute;
     bottom: 180px;
-    right: 200px;
+    right: 390px;
+    z-index: 10;
     width: 130px;
     height: 200px;
     border-right: 30px solid #1C302F;
