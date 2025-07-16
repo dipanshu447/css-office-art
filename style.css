@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Handlee&display=swap');
+
 :root {
     --lamp-color: rgb(88, 88, 88);
     --table-depth-color: #423928;
     --window-color: #A8B6C7;
-    --leaf-color: linear-gradient(to bottom right, #4CAF50, #2E7D32);
+    --leaf-color: linear-gradient(to bottom right, #4CAF50, #1f6323);
     --cup-color: #F78438;
     --floor-color: #5c528bee;
 }
@@ -27,6 +29,30 @@ body {
     height: 100%;
 }
 
+.heading{
+    position: absolute;
+    top: 20px;
+    left: 40%;
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 10px;
+    font-weight: 600;
+    font-size: 30px;
+    color: #b3b3b3;
+}
+
+.heading::after{
+    content: "Cozy Office Vibes";
+    position: absolute;
+    width: 400px;
+    top: 0px;
+    left: 1%;
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 10px;
+    font-weight: 600;
+    font-size: 30px;
+    color: #000000;
+}
+
 .clock {
     width: 100px;
     height: 100px;
@@ -34,9 +60,7 @@ body {
     margin: 80px 50px;
     transform: scale(0.8);
     position: relative;
-    /* border: 6px solid #272627; */
     border: 4px solid #cacaca;
-    /* outline: 6px solid #515051; */
     outline: 6px solid #272627;
 }
 
@@ -64,7 +88,6 @@ body {
     right: 48%;
     height: 2rem;
     color: rgb(197, 40, 40);
-    /* color: rgb(51, 51, 51); */
     transform-origin: top;
     animation: ticking 60s steps(60) infinite;
 }
@@ -171,14 +194,15 @@ body {
     width: 100px;
     height: 120px;
     border-radius: 10px 10px 40% 40%;
-    background: grey;
+    background: #50442d;
     transform: scale(0.6);
+    border-top: 20px solid #756546;
 }
 
 .branch {
     display: block;
     position: absolute;
-    top: -100px;
+    top: -120px;
     left: 30%;
     width: 3px;
     height: 100px;
@@ -202,7 +226,7 @@ body {
 .branch2 {
     display: block;
     position: absolute;
-    top: -40px;
+    top: -60px;
     left: 60%;
     width: 3px;
     height: 40px;
@@ -315,11 +339,12 @@ body {
     top: 4%;
     left: 34%;
     font-size: 0.7rem;
-    font-family: 'Comic Sans MS', 'Segoe UI', cursive, sans-serif;
+    font-weight: 600;
+    font-family: "Handlee", cursive;
 }
 
 .stickyNote small {
-    font-family: 'Comic Sans MS', 'Segoe UI', cursive, sans-serif;
+    font-family: "Handlee", cursive;
     font-size: 0.55rem;
     font-weight: 600;
     color: #2c2c2c;
@@ -470,7 +495,7 @@ body {
     top: 11px;
     left: -2px;
     display: flex;
-    gap: 20px;
+    gap: 17px;
 }
 
 .wheel {
@@ -480,15 +505,62 @@ body {
     border-radius: 50%;
 }
 
+.wheel.enlarge {
+    padding: 10px;
+}
+
 .cup {
-    z-index: 10;
-    width: 40px;
-    height: 45px;
-    background: var(--cup-color);
-    position: absolute;
-    bottom: 270px;
-    right: 240px;
-    border-radius: 5px;
+  z-index: 10;
+  width: 40px;
+  height: 45px;
+  background: var(--cup-color);
+  position: absolute;
+  bottom: 260px;
+  right: 300px;
+  border-radius: 5px;
+  box-shadow: inset -2px -2px 5px rgba(0,0,0,0.2), 0 4px 6px rgba(0,0,0,0.2);
+  overflow: visible;
+}
+
+.cup::before,
+.cup::after {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 5px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  opacity: 0;
+  animation: none;
+}
+
+.cup::after {
+  left: 40%;
+  height: 15px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.cup:hover::before,
+.cup:hover::after {
+  animation: steamUp 1.5s ease-in-out infinite;
+  opacity: 1;
+}
+
+@keyframes steamUp {
+  0% {
+    transform: translateX(-50%) translateY(0) scaleX(1);
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateX(-50%) translateY(-30px) scaleX(1.3);
+    opacity: 0;
+  }
 }
 
 .cupHolder {
