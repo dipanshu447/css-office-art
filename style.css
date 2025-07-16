@@ -495,6 +495,27 @@ body {
     border-radius: 30px;
 }
 
+.chairHandle {
+    position: relative;
+    top: 120px;
+    left: 20px;
+    z-index: 10;
+    width: 100px;
+    height: 80px;
+    border: 15px solid #1C302F;
+    border-radius: 30px;
+}
+
+.chairHandledepth {
+    position: relative;
+    top: 125px;
+    left: 858px;
+    width: 100px;
+    height: 80px;
+    border: 15px solid #132020;
+    border-radius: 30px;
+}
+
 .chairStand {
     display: block;
     position: absolute;
