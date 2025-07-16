@@ -3,6 +3,7 @@
     --table-depth-color: #423928;
     --window-color: #A8B6C7;
     --leaf-color: linear-gradient(to bottom right, #4CAF50, #2E7D32);
+    --cup-color: #F78438;
 }
 
 * {
@@ -414,10 +415,34 @@ body {
     border-radius: 50%;
 }
 
-/* .cup {
-    width: 20px;
-    height: 30px;
-    background: #000;
+.cup {
+    z-index: 10;
+    width: 40px;
+    height: 45px;
+    background: var(--cup-color);
     position: absolute;
-    bottom: 500px;
-} */
+    bottom: 270px;
+    right: 240px;
+    border-radius: 5px;
+}
+
+.cupHolder {
+    width: 30px;
+    height: 30px;
+    border: 5px solid var(--cup-color);
+    position: absolute;
+    top: 8px;
+    left: 25px;
+    border-radius: 50%;
+    z-index: 0;
+    background: transparent;
+}
+
+.cupDepth {
+    position: absolute;
+    left: 0;
+    width: 12px;
+    height: 45px;
+    background: #DA6C2A;
+    border-radius: 5px 0 0 5px;
+}
