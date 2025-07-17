@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Handlee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Code:wght@300..700&family=Handlee&display=swap');
 
 :root {
     --lamp-color: rgb(88, 88, 88);
@@ -61,17 +61,20 @@ body {
 }
 
 @keyframes pulseGlow {
-    0%, 100% {
+
+    0%,
+    100% {
         text-shadow:
-            0 0 5px rgba(197, 152, 255, 0.1),
-            0 0 10px rgba(197, 152, 255, 0.2),
-            0 0 18px rgba(197, 152, 255, 0.3);
+            0 0 4px rgba(205, 173, 255, 0.2),
+            0 0 8px rgba(205, 173, 255, 0.25),
+            0 0 12px rgba(205, 173, 255, 0.3);
     }
+
     50% {
         text-shadow:
-            0 0 8px rgba(134, 91, 255, 0.2),
-            0 0 16px rgba(197, 152, 255, 0.5),
-            0 0 28px rgba(197, 152, 255, 0.2);
+            0 0 6px rgba(205, 173, 255, 0.3),
+            0 0 10px rgba(205, 173, 255, 0.35),
+            0 0 18px rgba(205, 173, 255, 0.4);
     }
 }
 
@@ -199,9 +202,9 @@ body {
 }
 
 .lampHead:hover::after {
-  background: radial-gradient(ellipse at top,
-    rgba(255, 255, 200, 0.5),
-    rgba(255, 255, 200, 0) 80%);
+    background: radial-gradient(ellipse at top,
+            rgba(255, 255, 200, 0.5),
+            rgba(255, 255, 200, 0) 80%);
 }
 
 .windows {
@@ -338,7 +341,7 @@ body {
     height: 130px;
     border: 6px solid #414141;
     background: #93d2ff;
-    padding: 8px;
+    /* padding: 2px; */
     border-radius: 3px;
 }
 
@@ -591,58 +594,60 @@ body {
 }
 
 .cup {
-  z-index: 10;
-  width: 40px;
-  height: 45px;
-  background: var(--cup-color);
-  position: absolute;
-  bottom: 260px;
-  right: 300px;
-  border-radius: 5px;
-  box-shadow: inset -2px -2px 5px rgba(0,0,0,0.2), 0 4px 6px rgba(0,0,0,0.2);
-  overflow: visible;
-  cursor: pointer;
+    z-index: 10;
+    width: 40px;
+    height: 45px;
+    background: var(--cup-color);
+    position: absolute;
+    bottom: 260px;
+    right: 300px;
+    border-radius: 5px;
+    box-shadow: inset -2px -2px 5px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.2);
+    overflow: visible;
+    cursor: pointer;
 }
 
 .cup::before,
 .cup::after {
-  content: "";
-  position: absolute;
-  top: -20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 5px;
-  height: 20px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.4);
-  opacity: 0;
-  animation: none;
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    opacity: 0;
+    animation: none;
 }
 
 .cup::after {
-  left: 40%;
-  height: 15px;
-  background: rgba(255, 255, 255, 0.3);
+    left: 40%;
+    height: 15px;
+    background: rgba(255, 255, 255, 0.3);
 }
 
 .cup:hover::before,
 .cup:hover::after {
-  animation: steamUp 1.5s ease-in-out infinite;
-  opacity: 1;
+    animation: steamUp 1.5s ease-in-out infinite;
+    opacity: 1;
 }
 
 @keyframes steamUp {
-  0% {
-    transform: translateX(-50%) translateY(0) scaleX(1);
-    opacity: 0.4;
-  }
-  50% {
-    opacity: 0.6;
-  }
-  100% {
-    transform: translateX(-50%) translateY(-30px) scaleX(1.3);
-    opacity: 0;
-  }
+    0% {
+        transform: translateX(-50%) translateY(0) scaleX(1);
+        opacity: 0.4;
+    }
+
+    50% {
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(-30px) scaleX(1.3);
+        opacity: 0;
+    }
 }
 
 .cupHolder {
@@ -673,3 +678,150 @@ body {
     height: 200px;
     background: #000;
 } */
+
+.screen {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: flex;
+}
+
+.codeEditor {
+    width: 50%;
+    background: #282C34;
+}
+
+.menubar {
+    width: 100%;
+    height: 10%;
+    background: #282d35;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 8px;
+    color: white;
+    font-family: 'Fira Code', monospace;
+}
+
+.menuBtn {
+    padding: 0 3px;
+    height: 100%;
+    cursor: pointer;
+}
+
+.menuBtn:hover {
+    background: #2C313C;
+}
+
+.tabBar {
+    width: 100%;
+    height: 10%;
+    background: #23282e;
+    font-size: 7px;
+    color: white;
+    display: flex;
+    font-weight: 300;
+    font-family: 'Fira Code', monospace;
+}
+
+.tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #21252B;
+    color: #9DA5B4;
+    padding: 0 5px;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.tab:hover {
+    background-color: #2a2f36;
+}
+
+.tab.active {
+    background-color: #1E2127;
+    color: #ffffff;
+}
+
+.code-block {
+  color: #abb2bf;
+  padding: 8px 6px;
+  border-radius: 10px;
+  font-family: 'Fira Code', 'Consolas', monospace;
+  font-size: 3px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  overflow-x: auto;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  height: 80%;
+}
+
+.code-block .comment    { color: #5c6370; font-style: italic; }
+.code-block .keyword    { color: #c678dd; }
+.code-block .string     { color: #98c379; }
+.code-block .number     { color: #d19a66; }
+.code-block .function   { color: #61afef; }
+.code-block .variable   { color: #e06c75; }
+
+.browser {
+    width: 50%;
+    background: #cce0ff;
+}
+
+.browserMenubar {
+    width: 100%;
+    height: 10%;
+    background: #c2d5f3;
+    display: flex;
+    justify-content: space-between;
+    font-size: 8px;
+    color: black;
+    font-family: 'Fira Code', monospace;
+    align-items: center;
+}
+
+.bmenuBtn {
+    padding: 0 3px;
+    height: 100%;
+    cursor: pointer;
+}
+
+.bmenuBtn:hover {
+    background: #b2c2dd;
+}
+
+.browserTab {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    background: #b2c2dd;
+    padding: 0 5px;
+    font-size: 5px;
+    gap: 3px;
+}
+
+.browserTab > span {
+    font-size: 6px;
+}
+
+.addressbar {
+    height: 10%;
+    width: 100%;
+    background: #bdceeb;
+    font-size: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.address {
+    color: rgb(54, 54, 54);
+    width: 90%;
+    background: #acbad6;
+    padding: 1px 0px;
+}
+
+.browser-body {
+    padding: 2px 5px;
+    font-size: 7px;
+}

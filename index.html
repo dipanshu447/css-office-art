@@ -79,8 +79,54 @@
             </div>
             <div class="depth"></div>
             <span class="computer mr">
-                <div class="app_window"></div>
-                <div class="app2_window"></div>
+                <div class="screen">
+                    <div class="codeEditor">
+                        <div class="menubar">
+                            <div class="menuBtn">□</div>
+                            <div class="menuBtn">-</div>
+                            <div class="menuBtn">x</div>
+                        </div>
+                        <div class="tabBar">
+                            <div class="tab active">app.js <span class="close">×</span></div>
+                            <div class="tab">api.js <span class="close">×</span></div>
+                        </div>
+                        <pre class="code-block">
+<span class="keyword">const</span> <span class="variable">appName</span> = <span class="string">"CozyWeb"</span>;
+
+<span class="keyword">function</span> <span class="function">startApp</span>() {
+  <span class="function">console</span>.log(<span class="string">`Launching ${appName}...`</span>);
+  <span class="function">simulateBuild</span>();
+}
+
+<span class="keyword">function</span> <span class="function">simulateBuild</span>() {
+  <span class="keyword">let</span> <span class="variable">step</span> = <span class="number">0</span>;
+  <span class="function">setInterval</span>(() => {
+    <span class="function">console</span>.log(<span class="string">`Step ${++step}: Compiling...`</span>);
+  }, <span class="number">1500</span>);
+}
+<span class="function">startApp</span>();
+</pre>
+
+                    </div>
+                    <div class="browser">
+                        <div class="browserMenubar">
+                            <div class="browserTab">localhost <span>X</span></div>
+                            <div style="display: flex;">
+                                <div class="bmenuBtn">□</div>
+                                <div class="bmenuBtn">-</div>
+                                <div class="bmenuBtn">x</div>
+                            </div>
+                        </div>
+                        <div class="addressbar">
+                            <div class="address">http://localhost:3000</div>
+                        </div>
+                        <div class="browser-body">
+                            Uncaught ReferenceError: simulateBuild is not defined<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;at startApp (app.js:5)<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;at app.js:10
+                        </div>
+                    </div>
+                </div>
                 <div class="stand">
                     <div class="holder"></div>
                 </div>
