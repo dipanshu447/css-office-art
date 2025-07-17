@@ -963,7 +963,7 @@ body {
 .mouse {
     position: absolute;
     top: 155px;
-    right: 10px;
+    right: 0px;
     width: 20px;
     height: 22px;
     border-radius: 50px;
@@ -978,4 +978,23 @@ body {
     height: 5px;
     background: white;
     border-radius: 50px;
+}
+
+.keyboard {
+    position: absolute;
+    top:155px;
+    width: 160px;
+    height: 25px;
+    background: #313131;
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    gap: 3px;
+    flex-wrap: wrap;
+}
+
+.key {
+    width: 5px;
+    height: 5px;
+    background: #3a3a3a;
 }
