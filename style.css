@@ -693,7 +693,7 @@ body {
 .cursor {
     position: absolute;
     bottom: 10px;
-    left: 25px;
+    left: 26px;
     width: 1px;
     height: 4px;
     background: #d4d4d4;
@@ -775,88 +775,105 @@ body {
     background: #1e1e1e;
     color: #d4d4d4;
     font-family: 'Fira Code', monospace;
-    padding: 10px 15px;
     overflow: hidden;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
     position: relative;
 }
 
-.cline {
-    font-size: 8px;
-    opacity: 0;
-    white-space: nowrap;
+.command {
+    font-size: 6px;
+    display: inline-block;
+    color: #a3be8c;
     overflow: hidden;
-    width: 100%;
-    animation: typing 2s steps(40, end) forwards;
+    white-space: nowrap;
+    animation: typing 3s steps(40, end) forwards;
 }
 
-.cline1 {
+.info {
+    color: #fdfdfd;
+}
+
+.ok {
+    color: #00ff00;
+}
+
+.warn {
+    color: #ffcc00;
+}
+
+.cline {
+    font-size: 6px;
+    opacity: 0;
+    white-space: nowrap;
+    width: 100%;
+    animation: appear 2s steps(40, end) forwards;
+}
+
+.cline0 {
     animation-delay: 0s;
 }
 
-.cline2 {
-    animation-delay: 1.6s;
-}
-
-.cline3 {
+.cline1 {
     animation-delay: 3.2s;
 }
 
-.cline4 {
+.cline2 {
     animation-delay: 4.8s;
 }
 
-.cline5 {
+.cline3 {
     animation-delay: 6.4s;
 }
 
-.cline6 {
+.cline4 {
     animation-delay: 8s;
 }
 
-.cline7 {
+.cline5 {
     animation-delay: 9.6s;
 }
 
-.cline8 {
+.cline6 {
     animation-delay: 11.2s;
 }
 
-.cline9 {
+.cline7 {
     animation-delay: 12.8s;
 }
 
-.cline10 {
+.cline8 {
     animation-delay: 14.4s;
 }
 
-.cline11 {
+.cline9 {
     animation-delay: 16s;
 }
 
-.cline12 {
-    animation-delay: 17.6s;
+.cline10 {
+    animation-delay: 17.5s;
 }
 
-.cline13 {
-    animation-delay: 19.2s;
+.cline11 {
+    animation-delay: 19.8s;
 }
 
-.cline14 {
-    animation-delay: 20.8s;
-}
-
-.cline15 {
-    animation-delay: 22.4s;
-}
-
-@keyframes typing {
+@keyframes appear {
     0% {
         opacity: 1;
     }
 
     100% {
         opacity: 1;
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 60%;
     }
 }
 
@@ -982,7 +999,7 @@ body {
 
 .keyboard {
     position: absolute;
-    top:155px;
+    top: 155px;
     width: 160px;
     height: 25px;
     background: #313131;
@@ -997,4 +1014,60 @@ body {
     width: 5px;
     height: 5px;
     background: #3a3a3a;
+}
+
+.tmenubar {
+    height: 10%;
+    background: #363636;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0px 5px;
+    gap: 3px;
+}
+
+.closeBtn {
+    background: #ff5f57;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+}
+
+.minimizeBtn {
+    background: #ffbd2e;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+}
+
+.maximizeBtn {
+    background: #28c840;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+}
+
+.tmenubar>span {
+    font-size: 7px;
+    margin-left: 50px;
+}
+
+.mainWindow {
+    height: 90%;
+    background: #252525;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.prompt {
+    display: flex;
+    font-size: 7px;
+    color: #51a8ed;
+}
+
+.prompt>span {
+    margin-left: 2px;
+    font-size: 7px;
+    color: white;
 }
