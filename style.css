@@ -460,7 +460,6 @@ body {
     border-radius: 5px;
     box-shadow: inset -2px -2px 5px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.2);
     overflow: visible;
-    cursor: pointer;
 }
 
 .cup::before,
@@ -655,13 +654,13 @@ body {
 
 .browser {
     width: 50%;
-    background: #cce0ff;
+    background: white;
 }
 
 .browserMenubar {
     width: 100%;
     height: 10%;
-    background: #c2d5f3;
+    background: rgb(235, 235, 235);
     display: flex;
     justify-content: space-between;
     font-size: 8px;
@@ -677,14 +676,14 @@ body {
 }
 
 .bmenuBtn:hover {
-    background: #b2c2dd;
+    background: #bdbdbd;
 }
 
 .browserTab {
     display: flex;
     align-items: center;
     height: 100%;
-    background: #b2c2dd;
+    background: #e2e2e2;
     padding: 0 5px;
     font-size: 5px;
     gap: 3px;
@@ -697,7 +696,7 @@ body {
 .addressbar {
     height: 10%;
     width: 100%;
-    background: #bdceeb;
+    background: rgb(228, 228, 228);
     font-size: 5px;
     display: flex;
     align-items: center;
@@ -707,13 +706,14 @@ body {
 .address {
     color: rgb(54, 54, 54);
     width: 90%;
-    background: #acbad6;
-    padding: 1px 0px;
+    background: #cfcfcf;
+    padding: 1px 4px;
 }
 
 .browser-body {
     padding: 2px 5px;
-    font-size: 7px;
+    font-size: 6px;
+    font-family: 'Segoe UI', sans-serif;
 }
 
 .terminal {
