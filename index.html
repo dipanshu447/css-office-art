@@ -8,9 +8,32 @@
     <title>CSS Art : Office Culture</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="utility.css">
+    <style>
+        .not-supported {
+            display: none;
+            font-family: sans-serif;
+            text-align: center;
+            padding: 2rem;
+            background: #111;
+            color: #eee;
+        }
+
+        @media screen and (max-width: 1024px) {
+            body>*:not(.not-supported) {
+                display: none !important;
+            }
+
+            .not-supported {
+                display: block;
+            }
+        }
+    </style>
 </head>
 
 <body>
+    <div class="not-supported">
+        ⚠️ This experience is best viewed on larger screens (min 1024px). Please view on desktop.
+    </div>
     <div class="canvas">
         <div class="clock">
             <div class="line hourHand"></div>
@@ -304,7 +327,8 @@
                         <span>bash</span>
                     </div>
                     <div class="mainWindow">
-                        <span class="prompt">user@devbox:~$<span class="command cline0"> ./cozyweb-server --start</span></span>
+                        <span class="prompt">user@devbox:~$<span class="command cline0"> ./cozyweb-server
+                                --start</span></span>
                         <div class="info cline cline1">[INFO] CozyWeb server starting...</div>
                         <div class="ok cline cline2">[OK] Loading environment variables...</div>
                         <div class="info cline cline3">[INFO] Connecting to database...</div>
@@ -315,7 +339,8 @@
                         <div class="info cline cline8">[INFO] CozyWeb running at http://localhost:3000</div>
                         <div class="warn cline cline9">[WARN] Low memory, optimizing assets...</div>
                         <div class="ok cline cline10">[OK] Optimization complete.</div>
-                        <span class="prompt cline cline11">user@devbox:~$ <div class="cursor" style="bottom: 4px;left: 66px;height: 6px"></div></span>
+                        <span class="prompt cline cline11">user@devbox:~$ <div class="cursor"
+                                style="bottom: 4px;left: 66px;height: 6px"></div></span>
                     </div>
                 </div>
                 <div class="stand">
