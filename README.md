@@ -2,6 +2,8 @@
 
 Welcome to **Office Vibes**, a purely **HTML + CSS** creation made for the [Dev.to x Axero Frontend Challenge](https://dev.to/challenges/frontend/axero). It’s not just a scene, it’s a *vibe*. A tribute to every late-night coder, coffee-sipper, and bug-fixer out there.
 
+> Note: For the best experience, view this in a desktop browser at 100% zoom. The layout is handcrafted and may distort on other scales.
+
 ## The Concept
 
 This isn't a typical landing page or component UI. **Office Vibes** is a fully handcrafted CSS art piece, a miniature dev world frozen in a moment:
