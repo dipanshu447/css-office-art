@@ -12,7 +12,6 @@
 
 <body>
     <div class="canvas">
-        <!-- <div class="heading">Cozy Office Vibes</div> -->
         <div class="clock">
             <div class="line hourHand"></div>
             <div class="line minHand"></div>
@@ -36,11 +35,21 @@
                 </div>
                 <div class="straightbook">
                     <div class="book" style="background: #5D3E41;left: 90px;">
-                        <div class="shine" style="width: 3px;height: 15px;left: 4px;background: #6F5152;z-index: 10;"></div>
-                        <div class="shine" style="width: 3px;height: 20px;top:25px;left:4px; background:#6F5152;z-index: 10;"></div>
+                        <div class="shine" style="width: 3px;height: 15px;left: 4px;background: #6F5152;z-index: 10;">
+                        </div>
+                        <div class="shine"
+                            style="width: 3px;height: 20px;top:25px;left:4px; background:#6F5152;z-index: 10;"></div>
                     </div>
-                    <div class="book" style="background: #505D41;left: 92px;transform: skew(8deg);"></div>
-                    <div class="book" style="background: #AA4725;left: 93px;transform: skew(13deg);"></div>
+                    <div class="book"
+                        style="background: #505D41; left: 92px; transform: skew(8deg); transition: all 0.3s ease;"
+                        onmouseover="this.style.transform = 'skew(8deg) translateY(-12px) scale(1.03)'; this.style.boxShadow = '0 8px 12px rgba(0, 0, 0, 0.2)'; this.style.zIndex = '1';"
+                        onmouseout="this.style.transform = 'skew(8deg)'; this.style.boxShadow = 'none'; this.style.zIndex = '0';">
+                    </div>
+                    <div class="book"
+                        style="background: #AA4725; left: 93px; transform: skew(13deg); transition: all 0.3s ease;"
+                        onmouseover="this.style.transform = 'skew(13deg) translateY(-12px) scale(1.03)'; this.style.boxShadow = '0 8px 12px rgba(0, 0, 0, 0.2)'; this.style.zIndex = '1';"
+                        onmouseout="this.style.transform = 'skew(13deg)'; this.style.boxShadow = 'none'; this.style.zIndex = '0';">
+                    </div>
                 </div>
             </div>
         </div>
@@ -134,7 +143,6 @@
 <div class="cursor"></div>
 <span class="function">startApp</span>();
 </pre>
-
                     </div>
                     <div class="browser">
                         <div class="browserMenubar">
@@ -373,7 +381,6 @@
         <div class="pcWire"></div>
         <div class="pcWire" style="position: absolute;left: 635px;top: 289px;"></div>
         <div class="pcWire" style="position: absolute;left: 920px;top: 290px;"></div>
-        <div class="dustbin"></div>
         <div class="chair">
             <div class="chairHandle"></div>
             <div class="chairStand">
