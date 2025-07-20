@@ -52,7 +52,7 @@ This project visually tells **that** story, the messy, beautiful side of coding 
 Clone this repo and open `index.html` directly, it’s fully self-contained.
 
 ```bash
-git clone https://github.com/DipanshuSahu/office-vibes
+git clone https://github.com/dipanshu447/css-office-art.git
 cd office-vibes
 open index.html
 ```
